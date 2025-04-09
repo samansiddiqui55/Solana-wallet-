@@ -1,0 +1,88 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 263 86% 64%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.wallet-adapter-button {
+  @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2;
+}
+
+.wallet-adapter-modal-wrapper {
+  @apply bg-background text-foreground border border-border rounded-lg;
+}
+
+.wallet-adapter-modal-button-close {
+  @apply text-foreground bg-secondary hover:bg-secondary/80;
+}
+
+.wallet-adapter-modal-title {
+  @apply text-foreground;
+}
+
+.wallet-adapter-modal-content {
+  @apply text-foreground;
+}
+
+.wallet-adapter-modal-list {
+  @apply mt-4;
+}
+
+.wallet-adapter-modal-list .wallet-adapter-button {
+  @apply bg-secondary text-foreground hover:bg-secondary/80 mb-2;
+}
+
+.wallet-adapter-dropdown {
+  @apply relative;
+}
+
+.wallet-adapter-dropdown-list {
+  @apply bg-secondary text-foreground absolute top-full right-0 mt-2 rounded-md border border-border shadow-lg;
+}
+
+.wallet-adapter-dropdown-list-item {
+  @apply text-foreground hover:bg-primary/20 px-4 py-2 cursor-pointer;
+}
